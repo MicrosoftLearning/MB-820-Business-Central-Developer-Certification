@@ -1,80 +1,70 @@
 ---
 lab:
-    title: 'Lab: Deploying Azure Resource Manager templates'
-    module: 'Module 1: Exploring Azure Resource Manager'
+    title: 'Lab 0: Setup your environment'
 ---
 
-# Lab: Deploying Azure Resource Manager templates
+# Lab: Setup your environment and software
 # Student lab manual
 
-## Lab scenario
+Setup your environment and software
+===================================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis, erat vel egestas faucibus, dui magna semper velit, id congue sapien lectus id turpis. Nam egestas tempus enim. Ut venenatis vehicula ex, id rutrum odio lacinia at. Donec congue, tortor sed fermentum imperdiet, mauris mi auctor dui, ac cursus ex augue a odio. Aliquam erat volutpat. Vivamus faucibus fringilla augue in dignissim. Quisque sit amet nulla id risus gravida auctor. Ut in est varius, cursus odio rhoncus, placerat erat. Suspendisse nec metus est.
+To start writing extensions for Dynamics 365 Business Central, you'll need a
+Business Central tenant, Visual Studio Code, and the AL Language extension for
+Microsoft Dynamics 365 Business Central.
 
-## Objectives
+**Lab prerequisites**
 
-After you complete this lab, you will be able to:
+-   A Business Central Saas Sandbox
 
-- Cras tincidunt massa et nunc vulputate, eget vestibulum massa tincidunt. 
+-   Visual Studio Code with AL Language extension
 
-- Maecenas suscipit at nisl vitae malesuada. 
+More information about getting started with AL is available here:
+<https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-get-started>
 
-- Suspendisse eu arcu id velit consequat venenatis.
+If you want to create a container-based sandbox, see [Get started with the
+Container Sandbox Development
+Environment](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-get-started-container-sandbox).
+For information about which sandboxes you can choose, see [Sandbox Environments
+for Dynamics 365 Business Central
+Development](https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-sandbox-overview).
 
-## Lab Setup
+You can either choose to run a sandbox environment deployed as a Dynamics 365
+Business Central service, or you can run a container-based image either hosted
+as an Azure VM or locally. You can also choose to run a sandbox environment with
+production data using the Business Central Admin Center.
 
-  - **Estimated Time**: 00 minutes
+**To create a Business Central Sandbox, follow these steps:**
 
-## Instructions
+1.  Sign up for a Dynamics 365 Business Central sandbox, using this link:
+    <https://signup.microsoft.com/signup?sku=6a4a1628-9b9a-424d-bed5-4118f0ede3fd&ru=https%3A%2F%2Fbusinesscentral.dynamics.com%2FSandbox%2F%3FredirectedFromSignup%3D1>
 
-### Before you start
+2.  Create a Sandbox environment:
 
-#### Setup Task
+    1.  In the navigation pane on the left side of the **Business Central
+        administration center**, select **Environments**, then select the
+        **New** action on the action ribbon.
 
-1. Integer dolor purus, gravida eu sem id, efficitur aliquet neque. 
+    2.  In the **Create Environment** pane, specify a name for the new
+        environment.
 
-1. Suspendisse viverra mauris in metus laoreet consectetur. 
+    3.  In the **Environment Type** list, choose **Sandbox**.
 
-1. Sed diam risus, convallis quis condimentum at, egestas malesuada libero. 
+    4.  Enter a name for the new environment, for example: **SandboxDev**
 
-### Exercise 0: 
+    5.  Choose **Create**.
 
-#### Task 0: 
+    6.  The new environment won't be accessible until the **State** shows
+        **Active**.
 
-1. Quisque dictum convallis metus, vitae vestibulum turpis dapibus non.
+    7.  More information about managing environments is available here:
+        <https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/administration/tenant-admin-center-environments#create-a-new-environment>
 
-    1. Suspendisse commodo tempor convallis. 
+**To install Visual Studio Code, follow these steps:**
 
-    1. Nunc eget quam facilisis, imperdiet felis ut, blandit nibh. 
+1.  Download Visual Studio Code, using this link:
+    <https://code.visualstudio.com/Download>
 
-    1. Phasellus pulvinar ornare sem, ut imperdiet justo volutpat et.
-
-1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-
-1. Vestibulum hendrerit orci urna, non aliquet eros eleifend vitae. 
-
-1. Curabitur nibh dui, vestibulum cursus neque commodo, aliquet accumsan risus. 
-
-    ```
-    Sed at malesuada orci, eu volutpat ex
-    ```
-
-1. In ac odio vulputate, faucibus lorem at, sagittis felis.
-
-1. Fusce tincidunt sapien nec dolor congue facilisis lacinia quis urna.
-
-    > **Note**: Ut feugiat est id ultrices gravida.
-
-1. Phasellus urna lacus, luctus at suscipit vitae, maximus ac nisl. 
-
-    - Morbi in tortor finibus, tempus dolor a, cursus lorem. 
-
-    - Maecenas id risus pharetra, viverra elit quis, lacinia odio. 
-
-    - Etiam rutrum pretium enim. 
-
-1. Curabitur in pretium urna, nec ullamcorper diam. 
-
-#### Review
-
-Maecenas fringilla ac purus non tincidunt. Aenean pellentesque velit id suscipit tempus. Cras at ullamcorper odio.
+2.  Download the AL Language extension for Microsoft Dynamics 365 Business
+    Central, using this link:
+    <https://marketplace.visualstudio.com/items?itemName=ms-dynamics-smb.al>
