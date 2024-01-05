@@ -1,63 +1,447 @@
 ---
 lab:
-    title: 'Lab: Deploying Azure Resource Manager templates'
-    type: 'Answer Key'
-    module: 'Module 1: Exploring Azure Resource Manager'
+    title: 'Lab 01: Create an extension containing a: table, table extension, pages, page extension.'
+    module: 'Module 1: Introduction to Business Central'
 ---
 
-# Lab: Deploying Azure Resource Manager templates
-# Student lab answer key
+Lab 01 - Create an extension containing a: table, table extension, pages, page extension.
+=========================================================================================
 
-## Instructions
+Overview
+--------
 
-### Before you start
+In this assignment, you will develop a Microsoft Dynamics 365 Business Central
+application to enhance the vendor management process. The goal is to provide a
+mechanism for rating vendors and customizing the rating categories. This system
+will facilitate more accurate vendor evaluation and support better
+decision-making.
 
-#### Setup Task
+The objective is to create a custom application for vendor rating in Microsoft
+Dynamics 365 Business Central. This application should allow vendors to receive
+ratings classified into categories such as "Excellent," "Very Good," and "Good
+Average." Users should have the ability to edit and configure these rating
+values.
 
-1. Integer dolor purus, gravida eu sem id, efficitur aliquet neque. 
+High Level Tasks
+----------------
 
-1. Suspendisse viverra mauris in metus laoreet consectetur. 
+Complete the following tasks:
 
-1. Sed diam risus, convallis quis condimentum at, egestas malesuada libero. 
+1.  Create a new app: Lab 01 Vendor Rating
 
-### Exercise 0: 
+2.  Create a table for Vendor Ratings
 
-#### Task 0: 
+3.  Create pages for Vendor Ratings
 
-1. Quisque dictum convallis metus, vitae vestibulum turpis dapibus non.
+4.  Add a Rating field to the Vendor table
 
-    1. Suspendisse commodo tempor convallis. 
+5.  Add a Rating field to the Vendor Card and Vendor List.
 
-    1. Nunc eget quam facilisis, imperdiet felis ut, blandit nibh. 
+6.  Add a PermissionSet.
 
-    1. Phasellus pulvinar ornare sem, ut imperdiet justo volutpat et.
+7.  Deploy your Vendor Rating app.
 
-1. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Detailed Steps
+--------------
 
-1. Vestibulum hendrerit orci urna, non aliquet eros eleifend vitae. 
+### Create a new app: Lab 01 Vendor Rating
 
-1. Curabitur nibh dui, vestibulum cursus neque commodo, aliquet accumsan risus. 
+To create a new app: Lab 01 Vendor Rating, follow these steps:
 
-    ```
-    Sed at malesuada orci, eu volutpat ex
-    ```
+1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!**
+    command, and then choose a path to a new empty folder and the version to
+    run.
 
-1. In ac odio vulputate, faucibus lorem at, sagittis felis.
+2.  Use **Lab 01 Vendor Rating** as the name of the project.
 
-1. Fusce tincidunt sapien nec dolor congue facilisis lacinia quis urna.
+3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter
+    exactly matches the name of your sandbox.
 
-    > **Note**: Ut feugiat est id ultrices gravida.
+4.  In the Command Palette, select **AL: Download Symbols**.
 
-1. Phasellus urna lacus, luctus at suscipit vitae, maximus ac nisl. 
+5.  If there are any errors, then update your **launch.json** file and download
+    symbols again.
 
-    - Morbi in tortor finibus, tempus dolor a, cursus lorem. 
+6.  Delete the **HelloWorld.al** file
 
-    - Maecenas id risus pharetra, viverra elit quis, lacinia odio. 
+7.  Create a new folder named: **src**
 
-    - Etiam rutrum pretium enim. 
+### Create a table for Vendor Ratings
 
-1. Curabitur in pretium urna, nec ullamcorper diam. 
+To create a table for Vendor Ratings, follow these steps:
 
-#### Review
+1.  Create a new .al file in the src folder.
 
-Maecenas fringilla ac purus non tincidunt. Aenean pellentesque velit id suscipit tempus. Cras at ullamcorper odio.
+    1.  To create a new table in your extension, first create a new file. You
+        can create a new file by selecting the New File button in the side bar
+        of Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorRating.Table.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorRating.Table.al file:  
+    al-languageCopy  
+    table 50100 VendorRating
+
+>   {
+
+>       Caption = 'Vendor Rating';
+
+>       DataClassification = CustomerContent;
+
+>   LookupPageId = "VendorRating List";
+
+>       fields
+
+>       {
+
+>           field(1; Code; Code[10])
+
+>           {
+
+>               DataClassification = CustomerContent;
+
+>               Caption = 'Rating Code';
+
+>           }
+
+>           field(2; Description; Text[50])
+
+>           {
+
+>               DataClassification = CustomerContent;
+
+>               Caption = 'Rating Description';
+
+>           }
+
+>       }
+
+>       keys
+
+>       {
+
+>           key(PK; Code)
+
+>           {
+
+>               Clustered = true;
+
+>           }
+
+>       }
+
+>   }
+
+### Create pages for Vendor Ratings
+
+To create a Card page for Vendor Ratings, follow these steps:
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new page in your extension, first create a new file. You can
+        create a new file by selecting the New File button in the side bar of
+        Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorRatingCard.Page.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorRatingCard.Page.al file:  
+    al-languageCopy  
+    page 50100 "VendorRating Card"
+
+>   {
+
+>       ApplicationArea = All;
+
+>       Caption = 'VendorRating Card';
+
+>       PageType = Card;
+
+>       SourceTable = VendorRating;
+
+>       layout
+
+>       {
+
+>           area(content)
+
+>           {
+
+>               group(General)
+
+>               {
+
+>                   Caption = 'General';
+
+>                   field("Code"; Rec."Code")
+
+>                   {
+
+>                       ToolTip = 'Specifies the value of the Rating Code
+>   field.';
+
+>                   }
+
+>                   field(Description; Rec.Description)
+
+>                   {
+
+>                       ToolTip = 'Specifies the value of the Rating Description
+>   field.';
+
+>                   }
+
+>               }
+
+>           }
+
+>       }
+
+>   }
+
+To create a List page for Vendor Ratings, follow these steps:
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new page in your extension, first create a new file. You can
+        create a new file by selecting the New File button in the side bar of
+        Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorRatingCard.Page.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorRatingCard.Page.al file:  
+    al-languageCopy  
+    page 50101 "VendorRating List"
+
+>   {
+
+>       ApplicationArea = All;
+
+>       Caption = 'VendorRating List';
+
+>       PageType = List;
+
+>       SourceTable = VendorRating;
+
+>       UsageCategory = Lists;
+
+>       CardPageId = "VendorRating Card";
+
+>       layout
+
+>       {
+
+>           area(content)
+
+>           {
+
+>               repeater(General)
+
+>               {
+
+>                   field("Code"; Rec."Code")
+
+>                   {
+
+>                       ToolTip = 'Specifies the value of the Rating Code
+>   field.';
+
+>                   }
+
+>                   field(Description; Rec.Description)
+
+>                   {
+
+>                       ToolTip = 'Specifies the value of the Rating Description
+>   field.';
+
+>                   }
+
+>               }
+
+>           }
+
+>       }
+
+>   }
+
+### Add a Rating field to the Vendor table.
+
+To add a Vandor Rating field to the Vendor table, follow these steps:
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new table extension in your extension, first create a new
+        file. You can create a new file by selecting the New File button in the
+        side bar of Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **Vendor.TableExt.al.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    Vendor.TableExt.al.alfile:  
+    al-languageCopy
+
+>   tableextension 50100 Vendor extends Vendor
+
+>   {
+
+>       fields
+
+>       {
+
+>           field(50100; "Vendor Rating"; Code[10])
+
+>           {
+
+>               Caption = 'Vendor Rating';
+
+>               DataClassification = CustomerContent;
+
+>               TableRelation = VendorRating;
+
+>           }
+
+>       }
+
+>   }
+
+### Add a Rating field to the Vendor Card and Vendor List
+
+To add a Vendor Rating field to the Vendor Card and List, follow these steps:
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new page extension in your extension, first create a new
+        file. You can create a new file by selecting the New File button in the
+        side bar of Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorCard.PageExt.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorCard.PageExt.al file:  
+    al-languageCopy  
+    pageextension 50100 VendorCard extends "Vendor Card"
+
+>   {
+
+>       layout{
+
+>           addlast(General)
+
+>           {
+
+>               field("Vendor Rating"; Rec."Vendor Rating")
+
+>               {
+
+                ToolTip = 'The rating of the vendor.';  
+ApplicationArea = All;
+
+>               }
+
+>           }
+
+>       }    
+
+>   }
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new page extension in your extension, first create a new
+        file. You can create a new file by selecting the New File button in the
+        side bar of Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorList.PageExt.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorList.PageExt.alfile:  
+    al-languageCopy  
+    pageextension 50101 VendorList extends "Vendor List"
+
+>   {
+
+>       layout
+
+>       {
+
+>           addlast(Control1)
+
+>           {
+
+>               field("Vendor Rating"; Rec."Vendor Rating")
+
+>               {
+
+>                   ToolTip = 'The rating of the vendor.';
+
+>   ApplicationArea = All;
+
+>               }
+
+>           }
+
+>       }
+
+>   }
+
+### Add a PermissionSet
+
+To add a Permissionset to the Vendor Rating app, follow these steps:
+
+1.  Create a new .al file in the src folder.
+
+    1.  To create a new permissionset in your extension, first create a new
+        file. You can create a new file by selecting the New File button in the
+        side bar of Visual Studio Code.
+
+    2.  Make sure that the filename ends with .al. In this example, you might
+        want to use the name **VendorRating.permissionset.al**.
+
+2.  Add the code to the table. Copy the following code and paste it in the
+    VendorRating.permissionset.al file:  
+    al-languageCopy  
+    permissionset 50100 VendorRating
+
+>   {
+
+>       Assignable = true;
+
+>       Permissions = tabledata VendorRating=RIMD,
+
+>           table VendorRating=X,
+
+>           page "VendorRating Card"=X,
+
+>           page "VendorRating List"=X;
+
+>   }
+
+### Deploy your Vendor Rating app.
+
+To deploy your Vendor Rating app, follow these steps:
+
+1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your
+    app.
+
+2.  Business Central now opens.
+
+3.  Navigate to the Vendor Card.
+
+4.  There should be Vendor Rating field in the General tab.
+
+5.  Select the Vendor Rating field dropdown.
+
+6.  The dropdown is currently empty and you need to add the following ratings,
+    using the +New action.
+
+7.  Add the following ratings: "Excellent," "Very Good," and "Good Average."
+
+8.  Select a Rating and apply it to the selected Vendor.
