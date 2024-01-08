@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab 04: Add a column and layout to a base report'
-    module: 'Module 5: AL Dev'
+    module: 'Module 4: AL Objects'
 ---
 
 Lab 04 – Add a column and layout to a base report.
