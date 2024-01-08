@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab 01: Create an extension containing a: table, table extension, pages, page extension.'
-    module: 'Module 1: Introduction to Business Central'
+    module: 'Module 4: AL Objects'
 ---
 
 Lab 01 - Create an extension containing a: table, table extension, pages, page extension.
