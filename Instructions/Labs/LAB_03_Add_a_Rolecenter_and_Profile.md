@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab 03: Add a Rolecenter and Profile'
-    module: 'Module 4: AL Objects'
+    module: 'Module 5: AL Objects'
 ---
 Lab 03 – Add a Rolecenter and Profile
 =====================================
