@@ -67,29 +67,18 @@ To create a report extension, follow these steps:
 >   reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase
 >   List"
 
->   {
-
->       dataset
-
->       {
-
->           add(Vendor)
-
->           {
-
->               column(PaymentTermsCode; "Payment Terms Code")
-
->               {
-
->                   IncludeCaption = true;
-
->               }
-
->           }
-
->       }
-
->   }
+           {
+               dataset
+               {
+                   add(Vendor)
+                   {
+                       column(PaymentTermsCode; "Payment Terms Code")
+                       {
+                           IncludeCaption = true;
+                       }
+                   }
+               }
+           }
 
 ### Update the report layout
 
@@ -112,23 +101,15 @@ To create a report extension, follow these steps:
     example:  
     al-languageCopy
 
->       rendering{
-
->           layout("StandardSalesInvoice.rdlc")
-
->           {
-
->               Type = RDLC;
-
->               LayoutFile = './src/Vendor Purchase List.rdlc';
-
->               Caption = 'Vendor Purchase List';
-
->               Summary = 'Vendor Purchase List';
-
->           }
-
->       }
+               rendering{
+                   layout("StandardSalesInvoice.rdlc")
+                   {
+                       Type = RDLC;
+                       LayoutFile = './src/Vendor Purchase List.rdlc';
+                       Caption = 'Vendor Purchase List';
+                       Summary = 'Vendor Purchase List';
+                   }
+               }
 
 1.  In the Command Palette, select: **AL:Package**, to update the layout(s) with
     the added field(s).
