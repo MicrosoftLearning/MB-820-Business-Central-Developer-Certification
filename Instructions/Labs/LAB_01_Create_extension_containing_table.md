@@ -217,29 +217,18 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
     Vendor.TableExt.al.alfile:  
     al-languageCopy
 
->   tableextension 50100 Vendor extends Vendor
-
->   {
-
->       fields
-
->       {
-
->           field(50100; "Vendor Rating"; Code[10])
-
->           {
-
->               Caption = 'Vendor Rating';
-
->               DataClassification = CustomerContent;
-
->               TableRelation = VendorRating;
-
->           }
-
->       }
-
->   }
+           tableextension 50100 Vendor extends Vendor
+           {
+               fields
+               {
+                   field(50100; "Vendor Rating"; Code[10])
+                   {
+                       Caption = 'Vendor Rating';
+                       DataClassification = CustomerContent;
+                       TableRelation = VendorRating;
+                   }
+               }
+           }
 
 ### Add a Rating field to the Vendor Card and Vendor List
 
