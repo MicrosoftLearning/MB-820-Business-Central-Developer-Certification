@@ -83,56 +83,33 @@ To create a table for Vendor Ratings, follow these steps:
     VendorRating.Table.al file:  
     al-languageCopy  
     table 50100 VendorRating
-
->   {
-
->       Caption = 'Vendor Rating';
-
->       DataClassification = CustomerContent;
-
->   LookupPageId = "VendorRating List";
-
->       fields
-
->       {
-
->           field(1; Code; Code[10])
-
->           {
-
->               DataClassification = CustomerContent;
-
->               Caption = 'Rating Code';
-
->           }
-
->           field(2; Description; Text[50])
-
->           {
-
->               DataClassification = CustomerContent;
-
->               Caption = 'Rating Description';
-
->           }
-
->       }
-
->       keys
-
->       {
-
->           key(PK; Code)
-
->           {
-
->               Clustered = true;
-
->           }
-
->       }
-
->   }
+    
+           {
+        
+               Caption = 'Vendor Rating';
+               DataClassification = CustomerContent;
+           LookupPageId = "VendorRating List";
+               fields
+               {
+                   field(1; Code; Code[10])
+                   {
+                       DataClassification = CustomerContent;
+                       Caption = 'Rating Code';
+                   }
+                   field(2; Description; Text[50])
+                   {
+                       DataClassification = CustomerContent;
+                       Caption = 'Rating Description';
+                   }
+               }
+               keys
+               {
+                   key(PK; Code)
+                   {
+                       Clustered = true;
+                   }
+               }
+           }
 
 ### Create pages for Vendor Ratings
 
@@ -152,55 +129,32 @@ To create a Card page for Vendor Ratings, follow these steps:
     al-languageCopy  
     page 50100 "VendorRating Card"
 
->   {
-
->       ApplicationArea = All;
-
->       Caption = 'VendorRating Card';
-
->       PageType = Card;
-
->       SourceTable = VendorRating;
-
->       layout
-
->       {
-
->           area(content)
-
->           {
-
->               group(General)
-
->               {
-
->                   Caption = 'General';
-
->                   field("Code"; Rec."Code")
-
->                   {
-
->                       ToolTip = 'Specifies the value of the Rating Code
->   field.';
-
->                   }
-
->                   field(Description; Rec.Description)
-
->                   {
-
->                       ToolTip = 'Specifies the value of the Rating Description
->   field.';
-
->                   }
-
->               }
-
->           }
-
->       }
-
->   }
+           {
+               ApplicationArea = All;
+               Caption = 'VendorRating Card';
+               PageType = Card;
+               SourceTable = VendorRating;
+               layout
+               {
+                   area(content)
+                   {
+                       group(General)
+                       {
+                           Caption = 'General';
+                           field("Code"; Rec."Code")
+                           {
+                               ToolTip = 'Specifies the value of the Rating Code
+           field.';
+                           }
+                           field(Description; Rec.Description)
+                           {
+                               ToolTip = 'Specifies the value of the Rating Description
+           field.';
+                           }
+                       }
+                   }
+               }
+           }
 
 To create a List page for Vendor Ratings, follow these steps:
 
