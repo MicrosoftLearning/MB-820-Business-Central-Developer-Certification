@@ -248,28 +248,19 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
     al-languageCopy  
     pageextension 50100 VendorCard extends "Vendor Card"
 
->   {
-
->       layout{
-
->           addlast(General)
-
->           {
-
->               field("Vendor Rating"; Rec."Vendor Rating")
-
->               {
-
-                ToolTip = 'The rating of the vendor.';  
-ApplicationArea = All;
-
->               }
-
->           }
-
->       }    
-
->   }
+           {
+               layout{
+                   addlast(General)
+                   {
+                       field("Vendor Rating"; Rec."Vendor Rating")
+                       {
+                        ToolTip = 'The rating of the vendor.';  
+        ApplicationArea = All;
+        
+                       }
+                   }
+               }    
+           }
 
 1.  Create a new .al file in the src folder.
 
@@ -285,31 +276,19 @@ ApplicationArea = All;
     al-languageCopy  
     pageextension 50101 VendorList extends "Vendor List"
 
->   {
-
->       layout
-
->       {
-
->           addlast(Control1)
-
->           {
-
->               field("Vendor Rating"; Rec."Vendor Rating")
-
->               {
-
->                   ToolTip = 'The rating of the vendor.';
-
->   ApplicationArea = All;
-
->               }
-
->           }
-
->       }
-
->   }
+           {
+               layout
+               {
+                   addlast(Control1)
+                   {
+                       field("Vendor Rating"; Rec."Vendor Rating")
+                       {
+                           ToolTip = 'The rating of the vendor.';
+           ApplicationArea = All; 
+                       }
+                   }
+               } 
+           }
 
 ### Add a PermissionSet
 
@@ -329,19 +308,13 @@ To add a Permissionset to the Vendor Rating app, follow these steps:
     al-languageCopy  
     permissionset 50100 VendorRating
 
->   {
-
->       Assignable = true;
-
->       Permissions = tabledata VendorRating=RIMD,
-
->           table VendorRating=X,
-
->           page "VendorRating Card"=X,
-
->           page "VendorRating List"=X;
-
->   }
+           {
+               Assignable = true;
+               Permissions = tabledata VendorRating=RIMD,
+                   table VendorRating=X,
+                   page "VendorRating Card"=X,
+                   page "VendorRating List"=X;
+           }
 
 ### Deploy your Vendor Rating app.
 
