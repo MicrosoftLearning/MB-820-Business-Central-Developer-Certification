@@ -64,6 +64,7 @@ To create an Installation Codeunit, follow these steps:
 
 3.  Add the following code in the Installation.Codeunit.al file:
 
+    ```
 >   al-languageCopy  
 >   codeunit 50200 Installation
 
@@ -104,7 +105,7 @@ To create an Installation Codeunit, follow these steps:
                    end;
                end;
            }
-
+    ```
 ### Test the installation code
 
 To test the installation code, follow these steps:
@@ -127,7 +128,8 @@ To create an upgrade codeunit, follow these steps:
 2.  Name the file **Upgrade.Codeunit.al**.
 
 3.  Add the following code in the Upgrade.Codeunit.al file:
-
+   
+    ```
 >   al-languageCopy  
 >   codeunit 50201 Upgrade
 
@@ -160,7 +162,8 @@ To create an upgrade codeunit, follow these steps:
                    end;
                end;
            }
-
+    ```
+    
 ### Test the Upgrade code
 
 To test the code in the upgrade codeunit, follow these steps:
