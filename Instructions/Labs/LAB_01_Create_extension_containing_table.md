@@ -83,7 +83,8 @@ To create a table for Vendor Ratings, follow these steps:
     VendorRating.Table.al file:  
     al-languageCopy  
     table 50100 VendorRating
-    
+
+    ```
            {
         
                Caption = 'Vendor Rating';
@@ -110,6 +111,7 @@ To create a table for Vendor Ratings, follow these steps:
                    }
                }
            }
+```
 
 ### Create pages for Vendor Ratings
 
