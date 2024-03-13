@@ -65,8 +65,9 @@ To create a Rolecenter page, follow these steps:
 
 3.  Add the following code in the MyRolecenter.Page.al file:
 
->   al-languageCopy  
->   page 50300 MyRoleCenter
+    ```
+       al-languageCopy  
+       page 50300 MyRoleCenter
 
            {
                PageType = RoleCenter;
@@ -171,7 +172,7 @@ To create a Rolecenter page, follow these steps:
                    }
                }
            }
-
+    ```
 ### Create a profile page
 
 To create a profile page, follow these steps:
@@ -181,7 +182,9 @@ To create a profile page, follow these steps:
 2.  Name the file **MyProfile.Profile.al**.
 
 3.  Add the following code in the MyProfile.Profile.alfile:  
-    al-languageCopy  
+
+   ```
+      al-languageCopy  
     profile MyProfile
 
            {
@@ -189,6 +192,7 @@ To create a profile page, follow these steps:
                RoleCenter = MyRoleCenter;
                Caption = 'My profile';
            }
+    ```
 
 ### Deploy your Lab 03 Rolecenter app.
 
