@@ -63,8 +63,9 @@ To create a page API for items, follow these steps:
 
 3.  Add the following code in the file Items.Page.al
 
->   al-languageCopy  
->   page 50100 Items
+    ```
+       al-languageCopy  
+       page 50100 Items
 
            {
                APIGroup = 'powerBI';
@@ -115,7 +116,8 @@ To create a page API for items, follow these steps:
                    }
                }
            }
-
+    ```
+    
 ### Create a Query API for Item Ledgers
 
 To create a query API for item ledgers, follow these steps:
@@ -126,8 +128,9 @@ To create a query API for item ledgers, follow these steps:
 
 3.  Add the following code in the file ItemLedgers.Query.al
 
->   al-languageCopy  
->   query 50100 ItemLedgers
+    ```
+       al-languageCopy  
+       query 50100 ItemLedgers
 
            {
                APIGroup = 'powerBI';
@@ -169,7 +172,7 @@ To create a query API for item ledgers, follow these steps:
                    }
                }
            }
-
+    ```
 ### Deploy your Lab 04 Reporting app.
 
 To deploy your Lab 04 Reporting app, follow these steps:
