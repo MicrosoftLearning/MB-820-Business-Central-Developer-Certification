@@ -67,6 +67,7 @@ To create a report extension, follow these steps:
 >   reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase
 >   List"
 
+    ```
            {
                dataset
                {
@@ -79,7 +80,8 @@ To create a report extension, follow these steps:
                    }
                }
            }
-
+    ```
+    
 ### Update the report layout
 
 To create a report extension, follow these steps:
@@ -98,8 +100,10 @@ To create a report extension, follow these steps:
 6.  Rename the layout to: Vendor Purchase List.rdlc
 
 7.  Add a rendering section to the VendorPurchaseList.ReportExt.al, like for
-    example:  
-    al-languageCopy
+    example:
+    
+   ```
+       al-languageCopy
 
                rendering{
                    layout("StandardSalesInvoice.rdlc")
@@ -110,6 +114,7 @@ To create a report extension, follow these steps:
                        Summary = 'Vendor Purchase List';
                    }
                }
+    ```
 
 1.  In the Command Palette, select: **AL:Package**, to update the layout(s) with
     the added field(s).
