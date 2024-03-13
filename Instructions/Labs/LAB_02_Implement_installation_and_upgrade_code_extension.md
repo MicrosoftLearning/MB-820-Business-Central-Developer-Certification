@@ -65,8 +65,8 @@ To create an Installation Codeunit, follow these steps:
 3.  Add the following code in the Installation.Codeunit.al file:
 
     ```
-   al-languageCopy  
-   codeunit 50200 Installation
+       al-languageCopy  
+       codeunit 50200 Installation
 
            {  
                Subtype = Install;
