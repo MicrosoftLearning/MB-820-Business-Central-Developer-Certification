@@ -130,8 +130,8 @@ To create an upgrade codeunit, follow these steps:
 3.  Add the following code in the Upgrade.Codeunit.al file:
    
     ```
-   al-languageCopy  
-   codeunit 50201 Upgrade
+       al-languageCopy  
+       codeunit 50201 Upgrade
 
            {
                Subtype = Upgrade;
