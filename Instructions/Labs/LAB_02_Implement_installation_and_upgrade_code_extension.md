@@ -65,8 +65,8 @@ To create an Installation Codeunit, follow these steps:
 3.  Add the following code in the Installation.Codeunit.al file:
 
     ```
->   al-languageCopy  
->   codeunit 50200 Installation
+   al-languageCopy  
+   codeunit 50200 Installation
 
            {  
                Subtype = Install;
@@ -130,8 +130,8 @@ To create an upgrade codeunit, follow these steps:
 3.  Add the following code in the Upgrade.Codeunit.al file:
    
     ```
->   al-languageCopy  
->   codeunit 50201 Upgrade
+   al-languageCopy  
+   codeunit 50201 Upgrade
 
            {
                Subtype = Upgrade;
