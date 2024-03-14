@@ -253,7 +253,7 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
     al-languageCopy  
     pageextension 50100 VendorCard extends "Vendor Card"
 
-````
+    ````
            {
                layout{
                    addlast(General)
