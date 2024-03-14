@@ -62,12 +62,11 @@ To create a report extension, follow these steps:
 
 3.  Add the following code in the file VendorPurchaseList.ReportExt.al
 
->   al-languageCopy
-
->   reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase
->   List"
-
     ```
+       al-languageCopy
+       reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase
+       List"
+    
            {
                dataset
                {
@@ -101,8 +100,8 @@ To create a report extension, follow these steps:
 
 7.  Add a rendering section to the VendorPurchaseList.ReportExt.al, like for
     example:
-    
-   ```
+
+    ```
        al-languageCopy
 
                rendering{
