@@ -80,11 +80,12 @@ To create a table for Vendor Ratings, follow these steps:
         want to use the name **VendorRating.Table.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorRating.Table.al file:  
-    al-languageCopy  
-    table 50100 VendorRating
+    VendorRating.Table.al file:
 
-    ```
+       ```
+        al-languageCopy  
+        table 50100 VendorRating
+
            {
         
                Caption = 'Vendor Rating';
@@ -127,11 +128,13 @@ To create a Card page for Vendor Ratings, follow these steps:
         want to use the name **VendorRatingCard.Page.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorRatingCard.Page.al file:  
-    al-languageCopy  
-    page 50100 "VendorRating Card"
-
+    VendorRatingCard.Page.al file:
+    
     ```
+        al-languageCopy  
+        page 50100 "VendorRating Card"
+
+   
            {
                ApplicationArea = All;
                Caption = 'VendorRating Card';
@@ -159,6 +162,7 @@ To create a Card page for Vendor Ratings, follow these steps:
                }
            }
     ```
+
 To create a List page for Vendor Ratings, follow these steps:
 
 1.  Create a new .al file in the src folder.
@@ -171,11 +175,12 @@ To create a List page for Vendor Ratings, follow these steps:
         want to use the name **VendorRatingCard.Page.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorRatingCard.Page.al file:  
-    al-languageCopy  
-    page 50101 "VendorRating List"
+    VendorRatingCard.Page.al file:
 
     ```
+        al-languageCopy  
+        page 50101 "VendorRating List"
+
            {
                ApplicationArea = All;
                Caption = 'VendorRating List';
@@ -204,6 +209,7 @@ To create a List page for Vendor Ratings, follow these steps:
                }
            }
     ```
+
 ### Add a Rating field to the Vendor table.
 
 To add a Vandor Rating field to the Vendor table, follow these steps:
@@ -218,7 +224,8 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
         want to use the name **Vendor.TableExt.al.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    Vendor.TableExt.al.alfile:  
+    Vendor.TableExt.al.alfile:
+
     ```
      al-languageCopy
 
@@ -249,11 +256,12 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
         want to use the name **VendorCard.PageExt.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorCard.PageExt.al file:  
-    al-languageCopy  
-    pageextension 50100 VendorCard extends "Vendor Card"
+    VendorCard.PageExt.al file:
+    
+    ```
+        al-languageCopy  
+        pageextension 50100 VendorCard extends "Vendor Card"
 
-    ````
            {
                layout{
                    addlast(General)
@@ -278,11 +286,12 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
         want to use the name **VendorList.PageExt.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorList.PageExt.alfile:  
-    al-languageCopy  
-    pageextension 50101 VendorList extends "Vendor List"
+    VendorList.PageExt.alfile:
 
-    ```
+    ``` 
+        al-languageCopy  
+        pageextension 50101 VendorList extends "Vendor List"
+
            {
                layout
                {
@@ -311,11 +320,12 @@ To add a Permissionset to the Vendor Rating app, follow these steps:
         want to use the name **VendorRating.permissionset.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the
-    VendorRating.permissionset.al file:  
+    VendorRating.permissionset.al file:
+
+    ```
     al-languageCopy  
     permissionset 50100 VendorRating
 
-    ```
            {
                Assignable = true;
                Permissions = tabledata VendorRating=RIMD,
@@ -324,6 +334,7 @@ To add a Permissionset to the Vendor Rating app, follow these steps:
                    page "VendorRating List"=X;
            }
     ```
+
 ### Deploy your Vendor Rating app.
 
 To deploy your Vendor Rating app, follow these steps:
