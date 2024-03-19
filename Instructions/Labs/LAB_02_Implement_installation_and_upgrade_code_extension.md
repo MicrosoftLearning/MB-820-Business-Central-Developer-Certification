@@ -45,9 +45,9 @@ To create a new app: Lab 02 InstallationUpgradeCode, follow these steps:
 
 5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
-6.  Delete the **HelloWorld.al** file
+6.  Delete the **HelloWorld.al** file.
 
-7.  Create a new folder named: **src**
+7.  Create a new folder named: **src**.
 
 ### Create an Installation Codeunit
 
@@ -60,8 +60,8 @@ To create an Installation Codeunit, follow these steps:
 3.  Add the following code in the Installation.Codeunit.al file:
 
     ```
-       al-languageCopy  
-       codeunit 50200 Installation
+        al-languageCopy  
+        codeunit 50200 Installation
            {  
                Subtype = Install;
                trigger OnInstallAppPerDatabase();
@@ -111,7 +111,7 @@ To test the installation code, follow these steps:
 
 3.  Open the **Salespeople/Purchasers** page.
 
-4.  The 5 salespeople should be in the list and their code start with **SP\_**
+4.  The 5 salespeople should be in the list and their code start with **SP\_**.
 
 ### Create an Upgrade Codeunit
 
@@ -169,9 +169,9 @@ To test the code in the upgrade codeunit, follow these steps:
 
 4.  Nothing has changed, because your upgrade code did not execute. In order for upgrade code to run, you need to increment the version number in the app.json file.
 
-5.  Open the app.json file
+5.  Open the app.json file.
 
-6.  In the app.json file set the version to **1.0.0.1**
+6.  In the app.json file set the version to **1.0.0.1**.
 
 7.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
@@ -181,9 +181,9 @@ To test the code in the upgrade codeunit, follow these steps:
 
 10. The codes of the recently published salespeople have now changed. The underscore was replaced by a space.
 
-11. Open the app.json file
+11. Open the app.json file.
 
-12. In the app.json file set the version to **1.0.0.2**
+12. In the app.json file set the version to **1.0.0.2**.
 
 13. In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
