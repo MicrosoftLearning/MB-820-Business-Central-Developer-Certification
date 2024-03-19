@@ -9,13 +9,9 @@ Lab 03 – Add a Rolecenter and Profile
 Overview
 --------
 
-In this assignment, you will design a personalized dashboard, known as a "Role
-Center," in Microsoft Dynamics 365 Business Central, tailored to the specific
-needs of a chosen job role within the organization.
+In this assignment, you will design a personalized dashboard, known as a "Role Center," in Microsoft Dynamics 365 Business Central, tailored to the specific needs of a chosen job role within the organization.
 
-The layout of the new rolecenter page will contain two parts. The first part is
-will be the "Headline RC Business Manager" and the second part is the "O365
-Activities.
+The layout of the new rolecenter page will contain two parts. The first part is will be the "Headline RC Business Manager" and the second part is the "O365 Activities.
 
 High Level Tasks
 ----------------
@@ -66,9 +62,8 @@ To create a Rolecenter page, follow these steps:
 3.  Add the following code in the MyRolecenter.Page.al file:
 
     ```
-       al-languageCopy  
-       page 50300 MyRoleCenter
-
+        al-languageCopy  
+        page 50300 MyRoleCenter
            {
                PageType = RoleCenter;
                Caption = 'My Role Center';
@@ -173,6 +168,7 @@ To create a Rolecenter page, follow these steps:
                }
            }
     ```
+
 ### Create a profile page
 
 To create a profile page, follow these steps:
@@ -184,9 +180,8 @@ To create a profile page, follow these steps:
 3.  Add the following code in the MyProfile.Profile.alfile:  
 
    ```
-      al-languageCopy  
-    profile MyProfile
-
+       al-languageCopy  
+       profile MyProfile
            {
                ProfileDescription = 'Sample Profile';
                RoleCenter = MyRoleCenter;
@@ -198,8 +193,7 @@ To create a profile page, follow these steps:
 
 To deploy your Lab 03 Rolecenter app, follow these steps:
 
-1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your
-    app.
+1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
 2.  Business Central now opens.
 
