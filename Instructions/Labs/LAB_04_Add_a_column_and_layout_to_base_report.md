@@ -10,9 +10,7 @@ Lab 04 – Add a column and layout to a base report.
 Overview
 --------
 
-In this assignment, you will enhance the **Vendor Purchase Report** by
-incorporating the "Payment Terms Code" into the dataset and adjusting the report
-layout accordingly.
+In this assignment, you will enhance the **Vendor Purchase Report** by incorporating the "Payment Terms Code" into the dataset and adjusting the report layout accordingly.
 
 High Level Tasks
 ----------------
@@ -34,19 +32,15 @@ Detailed Steps
 
 To create a new app: Lab 04 Reporting, follow these steps:
 
-1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!**
-    command, and then choose a path to a new empty folder and the version to
-    run.
+1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!** command, and then choose a path to a new empty folder and the version to run.
 
 2.  Use **Lab 04 Reporting** as the name of the project.
 
-3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter
-    exactly matches the name of your sandbox.
+3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter exactly matches the name of your sandbox.
 
 4.  In the Command Palette, select **AL: Download Symbols**.
 
-5.  If there are any errors, then update your **launch.json** file and download
-    symbols again.
+5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
 6.  Delete the **HelloWorld.al** file
 
@@ -63,10 +57,8 @@ To create a report extension, follow these steps:
 3.  Add the following code in the file VendorPurchaseList.ReportExt.al
 
     ```
-       al-languageCopy
-       reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase
-       List"
-    
+        al-languageCopy
+        reportextension 50400 "Vendor Purchase List" extends "Vendor - Purchase List"
            {
                dataset
                {
@@ -93,17 +85,14 @@ To create a report extension, follow these steps:
 
 4.  The layout now downloads as VendorPurchaseList.rdlc
 
-5.  Copy the VendorPurchaseList.rdlc file to the src folder of your Lab 04
-    Reporting app.
+5.  Copy the VendorPurchaseList.rdlc file to the src folder of your Lab 04 Reporting app.
 
 6.  Rename the layout to: Vendor Purchase List.rdlc
 
-7.  Add a rendering section to the VendorPurchaseList.ReportExt.al, like for
-    example:
+7.  Add a rendering section to the VendorPurchaseList.ReportExt.al, like for example:
 
     ```
-       al-languageCopy
-
+        al-languageCopy
                rendering{
                    layout("StandardSalesInvoice.rdlc")
                    {
@@ -115,8 +104,7 @@ To create a report extension, follow these steps:
                }
     ```
 
-1.  In the Command Palette, select: **AL:Package**, to update the layout(s) with
-    the added field(s).
+1.  In the Command Palette, select: **AL:Package**, to update the layout(s) with the added field(s).
 
 2.  Open the Vendor Purchase List.rdlc in Report Builder or Visual Studio.
 
@@ -132,8 +120,7 @@ To create a report extension, follow these steps:
 
 To deploy your Lab 04 Reporting app, follow these steps:
 
-1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your
-    app.
+1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
 2.  Business Central now opens.
 
