@@ -42,9 +42,9 @@ To create a new app: Lab 04 Reporting, follow these steps:
 
 5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
-6.  Delete the **HelloWorld.al** file
+6.  Delete the **HelloWorld.al** file.
 
-7.  Create a new folder named: **src**
+7.  Create a new folder named: **src**.
 
 ### Create a Report Extension
 
@@ -52,7 +52,7 @@ To create a report extension, follow these steps:
 
 1.  Create a new .al file in the src folder.
 
-2.  Name the file **VendorPurchaseList.ReportExt.al**
+2.  Name the file **VendorPurchaseList.ReportExt.al**.
 
 3.  Add the following code in the file VendorPurchaseList.ReportExt.al
 
@@ -79,15 +79,15 @@ To create a report extension, follow these steps:
 
 1.  In Business Central, navigate to the **Report Layouts** page.
 
-2.  Filter the list on reports with the Report ID 309
+2.  Filter the list on reports with the Report ID 309.
 
 3.  Export the layout of the Vendor Purchase List report.
 
-4.  The layout now downloads as VendorPurchaseList.rdlc
+4.  The layout now downloads as VendorPurchaseList.rdlc.
 
 5.  Copy the VendorPurchaseList.rdlc file to the src folder of your Lab 04 Reporting app.
 
-6.  Rename the layout to: Vendor Purchase List.rdlc
+6.  Rename the layout to: Vendor Purchase List.rdlc.
 
 7.  Add a rendering section to the VendorPurchaseList.ReportExt.al, like for example:
 
@@ -108,11 +108,11 @@ To create a report extension, follow these steps:
 
 2.  Open the Vendor Purchase List.rdlc in Report Builder or Visual Studio.
 
-3.  In the layout, add a column after the **VendorName** column
+3.  In the layout, add a column after the **VendorName** column.
 
-4.  In the column header use: **[\@PaymentTermsCodeCaption]**
+4.  In the column header use: **[\@PaymentTermsCodeCaption]**.
 
-5.  In the column row use: **[PaymentTermsCode]**
+5.  In the column row use: **[PaymentTermsCode]**.
 
 6.  Save and close the layout file.
 
@@ -126,12 +126,12 @@ To deploy your Lab 04 Reporting app, follow these steps:
 
 3.  Open the Report Layouts page.
 
-4.  Filter the list on reports with the **Report ID 309**
+4.  Filter the list on reports with the **Report ID 309**.
 
 5.  There are now two layouts for report 309, **Vendor Purchase List**.
 
-6.  Select the layout from your **Lab 04 Reporting** app
+6.  Select the layout from your **Lab 04 Reporting** app.
 
-7.  Run the report layout
+7.  Run the report layout.
 
 8.  The **Payment Terms Code** should now be visible in the report.
