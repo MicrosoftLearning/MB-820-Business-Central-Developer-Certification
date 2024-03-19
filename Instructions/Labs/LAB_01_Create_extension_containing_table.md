@@ -85,12 +85,10 @@ To create a table for Vendor Ratings, follow these steps:
        ```
         al-languageCopy  
         table 50100 VendorRating
-
            {
-        
                Caption = 'Vendor Rating';
                DataClassification = CustomerContent;
-           LookupPageId = "VendorRating List";
+               LookupPageId = "VendorRating List";
                fields
                {
                    field(1; Code; Code[10])
@@ -133,8 +131,6 @@ To create a Card page for Vendor Ratings, follow these steps:
     ```
         al-languageCopy  
         page 50100 "VendorRating Card"
-
-   
            {
                ApplicationArea = All;
                Caption = 'VendorRating Card';
@@ -149,13 +145,11 @@ To create a Card page for Vendor Ratings, follow these steps:
                            Caption = 'General';
                            field("Code"; Rec."Code")
                            {
-                               ToolTip = 'Specifies the value of the Rating Code
-           field.';
+                               ToolTip = 'Specifies the value of the Rating Code field.';
                            }
                            field(Description; Rec.Description)
                            {
-                               ToolTip = 'Specifies the value of the Rating Description
-           field.';
+                               ToolTip = 'Specifies the value of the Rating Description field.';
                            }
                        }
                    }
@@ -180,7 +174,6 @@ To create a List page for Vendor Ratings, follow these steps:
     ```
         al-languageCopy  
         page 50101 "VendorRating List"
-
            {
                ApplicationArea = All;
                Caption = 'VendorRating List';
@@ -196,13 +189,11 @@ To create a List page for Vendor Ratings, follow these steps:
                        {
                            field("Code"; Rec."Code")
                            {
-                               ToolTip = 'Specifies the value of the Rating Code
-           field.';
+                               ToolTip = 'Specifies the value of the Rating Code field.';
                            }
                            field(Description; Rec.Description)
                            {
-                               ToolTip = 'Specifies the value of the Rating Description
-           field.';
+                               ToolTip = 'Specifies the value of the Rating Description field.';
                            }
                        }
                    }
@@ -227,9 +218,8 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
     Vendor.TableExt.al.alfile:
 
     ```
-     al-languageCopy
-
-           tableextension 50100 Vendor extends Vendor
+        al-languageCopy
+        tableextension 50100 Vendor extends Vendor
            {
                fields
                {
@@ -242,6 +232,7 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
                }
            }
     ```
+
 ### Add a Rating field to the Vendor Card and Vendor List
 
 To add a Vendor Rating field to the Vendor Card and List, follow these steps:
@@ -261,7 +252,6 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
     ```
         al-languageCopy  
         pageextension 50100 VendorCard extends "Vendor Card"
-
            {
                layout{
                    addlast(General)
@@ -269,13 +259,13 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
                        field("Vendor Rating"; Rec."Vendor Rating")
                        {
                         ToolTip = 'The rating of the vendor.';  
-        ApplicationArea = All;
-        
+                        ApplicationArea = All;
                        }
                    }
                }    
            }
     ```
+
 1.  Create a new .al file in the src folder.
 
     1.  To create a new page extension in your extension, first create a new
@@ -291,7 +281,6 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
     ``` 
         al-languageCopy  
         pageextension 50101 VendorList extends "Vendor List"
-
            {
                layout
                {
@@ -300,12 +289,13 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
                        field("Vendor Rating"; Rec."Vendor Rating")
                        {
                            ToolTip = 'The rating of the vendor.';
-           ApplicationArea = All; 
+                           ApplicationArea = All; 
                        }
                    }
                } 
            }
     ```
+
 ### Add a PermissionSet
 
 To add a Permissionset to the Vendor Rating app, follow these steps:
@@ -323,9 +313,8 @@ To add a Permissionset to the Vendor Rating app, follow these steps:
     VendorRating.permissionset.al file:
 
     ```
-    al-languageCopy  
-    permissionset 50100 VendorRating
-
+        al-languageCopy  
+        permissionset 50100 VendorRating
            {
                Assignable = true;
                Permissions = tabledata VendorRating=RIMD,
