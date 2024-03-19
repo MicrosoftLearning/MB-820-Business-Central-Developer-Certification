@@ -42,9 +42,9 @@ To create a new app: Lab 05 APIs, follow these steps:
 
 5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
-6.  Delete the **HelloWorld.al** file
+6.  Delete the **HelloWorld.al** file.
 
-7.  Create a new folder named: **src**
+7.  Create a new folder named: **src**.
 
 ### Create a Page API for Items
 
@@ -52,7 +52,7 @@ To create a page API for items, follow these steps:
 
 1.  Create a new .al file in the src folder.
 
-2.  Name the file **Items.Page.al**
+2.  Name the file **Items.Page.al**.
 
 3.  Add the following code in the file Items.Page.al
 
@@ -116,7 +116,7 @@ To create a query API for item ledgers, follow these steps:
 
 1.  Create a new .al file in the src folder.
 
-2.  Name the file **ItemLedgers.Query.al**
+2.  Name the file **ItemLedgers.Query.al**.
 
 3.  Add the following code in the file ItemLedgers.Query.al
 
