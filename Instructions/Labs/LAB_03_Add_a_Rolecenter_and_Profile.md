@@ -9,13 +9,9 @@ Lab 03 – Add a Rolecenter and Profile
 Overview
 --------
 
-In this assignment, you will design a personalized dashboard, known as a "Role
-Center," in Microsoft Dynamics 365 Business Central, tailored to the specific
-needs of a chosen job role within the organization.
+In this assignment, you will design a personalized dashboard, known as a "Role Center," in Microsoft Dynamics 365 Business Central, tailored to the specific needs of a chosen job role within the organization.
 
-The layout of the new rolecenter page will contain two parts. The first part is
-will be the "Headline RC Business Manager" and the second part is the "O365
-Activities.
+The layout of the new rolecenter page will contain two parts. The first part is will be the "Headline RC Business Manager" and the second part is the "O365 Activities.
 
 High Level Tasks
 ----------------
@@ -37,23 +33,19 @@ Detailed Steps
 
 To create a new app: Lab 03 Rolecenter, follow these steps:
 
-1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!**
-    command, and then choose a path to a new empty folder and the version to
-    run.
+1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!**command, and then choose a path to a new empty folder and the version torun.
 
 2.  Use **Lab 03 Rolecenter** as the name of the project.
 
-3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter
-    exactly matches the name of your sandbox.
+3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter exactly matches the name of your sandbox.
 
 4.  In the Command Palette, select **AL: Download Symbols**.
 
-5.  If there are any errors, then update your **launch.json** file and download
-    symbols again.
+5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
-6.  Delete the **HelloWorld.al** file
+6.  Delete the **HelloWorld.al** file.
 
-7.  Create a new folder named: **src**
+7.  Create a new folder named: **src**.
 
 ### Create a Rolecenter page
 
@@ -66,9 +58,8 @@ To create a Rolecenter page, follow these steps:
 3.  Add the following code in the MyRolecenter.Page.al file:
 
     ```
-       al-languageCopy  
-       page 50300 MyRoleCenter
-
+        al-languageCopy  
+        page 50300 MyRoleCenter
            {
                PageType = RoleCenter;
                Caption = 'My Role Center';
@@ -173,6 +164,7 @@ To create a Rolecenter page, follow these steps:
                }
            }
     ```
+
 ### Create a profile page
 
 To create a profile page, follow these steps:
@@ -184,9 +176,8 @@ To create a profile page, follow these steps:
 3.  Add the following code in the MyProfile.Profile.alfile:  
 
    ```
-      al-languageCopy  
-    profile MyProfile
-
+       al-languageCopy  
+       profile MyProfile
            {
                ProfileDescription = 'Sample Profile';
                RoleCenter = MyRoleCenter;
@@ -198,13 +189,12 @@ To create a profile page, follow these steps:
 
 To deploy your Lab 03 Rolecenter app, follow these steps:
 
-1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your
-    app.
+1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
 2.  Business Central now opens.
 
-3.  In My Settings, in the Role field select: My Profile
+3.  In My Settings, in the Role field select: My Profile.
 
-4.  Select Ok
+4.  Select Ok.
 
-5.  Your Business Central start page now displays your new rolecenter
+5.  Your Business Central start page now displays your new rolecenter.
