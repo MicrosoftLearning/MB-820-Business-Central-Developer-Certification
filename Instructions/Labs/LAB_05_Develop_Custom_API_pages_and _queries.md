@@ -10,10 +10,7 @@ Lab 05 – Develop custom API pages and queries.
 Overview
 --------
 
-In this assignment, you will create two distinct APIs - one for managing items
-and another for querying item ledgers. These APIs will provide efficient access
-to critical data, streamlining processes for better item management and ledger
-inquiries.
+In this assignment, you will create two distinct APIs - one for managing items and another for querying item ledgers. These APIs will provide efficient access to critical data, streamlining processes for better item management and ledger inquiries.
 
 High Level Tasks
 ----------------
@@ -35,23 +32,19 @@ Detailed Steps
 
 To create a new app: Lab 05 APIs, follow these steps:
 
-1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!**
-    command, and then choose a path to a new empty folder and the version to
-    run.
+1.  Press the **Alt+A**, **Alt+L** shortcut keys to trigger the **AL Go!** command, and then choose a path to a new empty folder and the version to run.
 
 2.  Use **Lab 05 APIs** as the name of the project.
 
-3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter
-    exactly matches the name of your sandbox.
+3.  In the the **launch.json** file, make sure the **EnvironmentName** parameter exactly matches the name of your sandbox.
 
 4.  In the Command Palette, select **AL: Download Symbols**.
 
-5.  If there are any errors, then update your **launch.json** file and download
-    symbols again.
+5.  If there are any errors, then update your **launch.json** file and download symbols again.
 
-6.  Delete the **HelloWorld.al** file
+6.  Delete the **HelloWorld.al** file.
 
-7.  Create a new folder named: **src**
+7.  Create a new folder named: **src**.
 
 ### Create a Page API for Items
 
@@ -59,14 +52,13 @@ To create a page API for items, follow these steps:
 
 1.  Create a new .al file in the src folder.
 
-2.  Name the file **Items.Page.al**
+2.  Name the file **Items.Page.al**.
 
 3.  Add the following code in the file Items.Page.al
 
     ```
-       al-languageCopy  
-       page 50100 Items
-
+        al-languageCopy  
+        page 50100 Items
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';
@@ -117,21 +109,20 @@ To create a page API for items, follow these steps:
                }
            }
     ```
-    
+
 ### Create a Query API for Item Ledgers
 
 To create a query API for item ledgers, follow these steps:
 
 1.  Create a new .al file in the src folder.
 
-2.  Name the file **ItemLedgers.Query.al**
+2.  Name the file **ItemLedgers.Query.al**.
 
 3.  Add the following code in the file ItemLedgers.Query.al
 
     ```
-       al-languageCopy  
-       query 50100 ItemLedgers
-
+        al-languageCopy  
+        query 50100 ItemLedgers
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';
@@ -173,11 +164,11 @@ To create a query API for item ledgers, follow these steps:
                }
            }
     ```
+
 ### Deploy your Lab 04 Reporting app.
 
 To deploy your Lab 04 Reporting app, follow these steps:
 
-1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your
-    app.
+1.  In VScode, use the CTRL+F5 shortcut, or the command Palette to publish your app.
 
 2.  Business Central now opens.
