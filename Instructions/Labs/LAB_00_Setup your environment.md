@@ -3,6 +3,13 @@ lab:
     title: 'Lab 0: Setup your environment'
 ---
 
+---
+lab:
+    title: 'Lab 0: Setup your environment and software'
+    module: 'Learning Path 00: Set up your environment'
+---
+
+
 # Lab: Setup your environment and software
 # Student lab manual
 
