@@ -3,6 +3,7 @@ lab:
     title: 'Lab 02: Implement installation and upgrade code in an extension'
     module: 'Module 4: AL Objects'
 ---
+
 Lab 02 – Implement installation and upgrade code in an extension.
 =================================================================
 
