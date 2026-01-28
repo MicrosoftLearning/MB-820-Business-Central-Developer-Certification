@@ -143,9 +143,9 @@ To create a List page for Vendor Ratings, follow these steps:
 
     1.  To create a new page in your extension, first create a new file. You can create a new file by selecting the New File button in the side bar of Visual Studio Code.
 
-    2.  Make sure that the filename ends with .al. In this example, you might want to use the name **VendorRatingCard.Page.al**.
+    2.  Make sure that the filename ends with .al. In this example, you might want to use the name **VendorRatingList.Page.al**.
 
-2.  Add the code to the table. Copy the following code and paste it in the VendorRatingCard.Page.al file:
+2.  Add the code to the table. Copy the following code and paste it in the VendorRatingList.Page.al file:
 
     ```
         al-languageCopy  
