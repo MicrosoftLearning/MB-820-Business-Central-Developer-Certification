@@ -67,7 +67,6 @@ To create a table for Vendor Ratings, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the VendorRating.Table.al file:
 
        ```
-        al-languageCopy  
         table 50100 VendorRating
            {
                Caption = 'Vendor Rating';
@@ -109,7 +108,6 @@ To create a Card page for Vendor Ratings, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the VendorRatingCard.Page.al file:
     
     ```
-        al-languageCopy  
         page 50100 "VendorRating Card"
            {
                ApplicationArea = All;
@@ -148,7 +146,6 @@ To create a List page for Vendor Ratings, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the VendorRatingList.Page.al file:
 
     ```
-        al-languageCopy  
         page 50101 "VendorRating List"
            {
                ApplicationArea = All;
@@ -190,7 +187,6 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the Vendor.TableExt.al.alfile:
 
     ```
-        al-languageCopy
         tableextension 50100 Vendor extends Vendor
            {
                fields
@@ -218,7 +214,6 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the VendorCard.PageExt.al file:
     
     ```
-        al-languageCopy  
         pageextension 50100 VendorCard extends "Vendor Card"
            {
                layout{
@@ -243,7 +238,6 @@ To add a Vendor Rating field to the Vendor Card and List, follow these steps:
 2.  Add the code to the table. Copy the following code and paste it in the VendorList.PageExt.alfile:
 
     ``` 
-        al-languageCopy  
         pageextension 50101 VendorList extends "Vendor List"
            {
                layout
@@ -272,8 +266,7 @@ To add a Permissionset to the Vendor Rating app, follow these steps:
 
 2.  Add the code to the table. Copy the following code and paste it in the VendorRating.permissionset.al file:
 
-    ```
-        al-languageCopy  
+    ``` 
         permissionset 50100 VendorRating
            {
                Assignable = true;
