@@ -185,7 +185,7 @@ To add a Vandor Rating field to the Vendor table, follow these steps:
 
     1.  To create a new table extension in your extension, first create a new file. You can create a new file by selecting the New File button in the side bar of Visual Studio Code.
 
-    2.  Make sure that the filename ends with .al. In this example, you might want to use the name **Vendor.TableExt.al.al**.
+    2.  Make sure that the filename ends with .al. In this example, you might want to use the name **Vendor.TableExt.al**.
 
 2.  Add the code to the table. Copy the following code and paste it in the Vendor.TableExt.al.alfile:
 
