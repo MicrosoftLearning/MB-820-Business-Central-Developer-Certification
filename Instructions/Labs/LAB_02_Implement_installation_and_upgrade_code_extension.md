@@ -62,7 +62,7 @@ To create an Installation Codeunit, follow these steps:
 
     ```
         al-languageCopy  
-        codeunit 50200 Installation
+        codeunit 50100 Installation
            {  
                Subtype = Install;
                trigger OnInstallAppPerDatabase();
@@ -126,7 +126,7 @@ To create an upgrade codeunit, follow these steps:
    
     ```
         al-languageCopy  
-        codeunit 50201 Upgrade
+        codeunit 50101 Upgrade
            {
                Subtype = Upgrade;
                trigger OnCheckPreconditionsPerCompany();
