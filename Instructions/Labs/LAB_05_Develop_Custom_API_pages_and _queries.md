@@ -57,8 +57,7 @@ To create a page API for items, follow these steps:
 3.  Add the following code in the file Items.Page.al
 
     ```
-        al-languageCopy  
-        page 50100 Items
+        page 50130 Items
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';
@@ -121,8 +120,7 @@ To create a query API for item ledgers, follow these steps:
 3.  Add the following code in the file ItemLedgers.Query.al
 
     ```
-        al-languageCopy  
-        query 50100 ItemLedgers
+        query 50120 ItemLedgers
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';
