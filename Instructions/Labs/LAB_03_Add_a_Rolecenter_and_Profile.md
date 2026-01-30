@@ -59,8 +59,7 @@ To create a Rolecenter page, follow these steps:
 3.  Add the following code in the MyRolecenter.Page.al file:
 
     ```
-        al-languageCopy  
-        page 50300 MyRoleCenter
+        page 50120 MyRoleCenter
            {
                PageType = RoleCenter;
                Caption = 'My Role Center';
