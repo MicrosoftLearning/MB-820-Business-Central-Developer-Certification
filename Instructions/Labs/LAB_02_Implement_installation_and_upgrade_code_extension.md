@@ -61,11 +61,10 @@ To create an Installation Codeunit, follow these steps:
 3.  Add the following code in the Installation.Codeunit.al file:
 
     ```
-        al-languageCopy  
-        codeunit 50200 Installation
+        codeunit 50100 Installation
            {  
                Subtype = Install;
-               trigger OnInstallAppPerDatabase();
+               trigger OnInstallAppPerCompany();
                var
                    myAppInfo: ModuleInfo;
                begin
@@ -124,9 +123,8 @@ To create an upgrade codeunit, follow these steps:
 
 3.  Add the following code in the Upgrade.Codeunit.al file:
    
-    ```
-        al-languageCopy  
-        codeunit 50201 Upgrade
+    ``` 
+        codeunit 50101 Upgrade
            {
                Subtype = Upgrade;
                trigger OnCheckPreconditionsPerCompany();
