@@ -1,9 +1,12 @@
 ---
 lab:
-    title: 'Lab 0: Setup your environment and software'
-    module: 'Learning Path 00: Set up your environment'
+  title: 'Lab 0: Setup your environment and software'
+  module: 'Learning Path 00: Set up your environment'
+  description: Setup your environment and software ===================================
+  duration: 32 minutes
+  level: 100
+  islab: true
 ---
-
 
 # Lab: Setup your environment and software
 # Student lab manual
