@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 05: Develop custom API pages and queries'
-    module: 'Module 6: Dev Tools'
+  title: 'Lab 05: Develop custom API pages and queries'
+  module: 'Module 6: Dev Tools'
+  description: Lab 05 – Develop custom API pages and queries. ==============================================
+  duration: 56 minutes
+  level: 200
+  islab: true
 ---
 
 Lab 05 – Develop custom API pages and queries.
