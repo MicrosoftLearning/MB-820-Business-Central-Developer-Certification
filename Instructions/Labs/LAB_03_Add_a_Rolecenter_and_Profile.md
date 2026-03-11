@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 03: Add a Rolecenter and Profile'
-    module: 'Module 5: AL Objects'
+  title: 'Lab 03: Add a Rolecenter and Profile'
+  module: 'Module 5: AL Objects'
+  description: Lab 03 – Add a Rolecenter and Profile =====================================
+  duration: 62 minutes
+  level: 200
+  islab: true
 ---
 
 Lab 03 – Add a Rolecenter and Profile
