@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 02: Implement installation and upgrade code in an extension'
-    module: 'Module 4: AL Objects'
+  title: 'Lab 02: Implement installation and upgrade code in an extension'
+  module: 'Module 4: AL Objects'
+  description: Lab 02 – Implement installation and upgrade code in an extension. =================================================================
+  duration: 92 minutes
+  level: 100
+  islab: true
 ---
 
 Lab 02 – Implement installation and upgrade code in an extension.
