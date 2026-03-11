@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 04: Add a column and layout to a base report'
-    module: 'Module 4: AL Objects'
+  title: 'Lab 04: Add a column and layout to a base report'
+  module: 'Module 4: AL Objects'
+  description: Lab 04 – Add a column and layout to a base report. ==================================================
+  duration: 88 minutes
+  level: 100
+  islab: true
 ---
 
 Lab 04 – Add a column and layout to a base report.
