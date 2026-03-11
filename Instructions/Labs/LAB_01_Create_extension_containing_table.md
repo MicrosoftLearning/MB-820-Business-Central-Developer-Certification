@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Lab 01: Create an extension containing a: table, table extension, pages, page extension.'
-    module: 'Module 4: Install, develop, and deploy for the Business Central application'
+  title: 'Lab 01: Create an extension containing a: table, table extension, pages,
+    page extension.'
+  module: 'Module 4: Install, develop, and deploy for the Business Central application'
+  description: 'Lab 01 - Create an extension containing a: table, table extension,
+    pages, page extension. ========================================================================================='
+  duration: 124 minutes
+  level: 100
+  islab: true
 ---
 
 Lab 01 - Create an extension containing a: table, table extension, pages, page extension.
