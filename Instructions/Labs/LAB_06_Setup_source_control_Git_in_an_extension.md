@@ -1,7 +1,11 @@
 ---
 lab:
-    title: 'Lab 05: Develop custom API pages and queries'
-    module: 'Module 6: Dev Tools'
+  title: 'Lab 05: Develop custom API pages and queries'
+  module: 'Module 6: Dev Tools'
+  description: Lab 06 – Setup source control, Git, in an extension. ====================================================
+  duration: 38 minutes
+  level: 200
+  islab: true
 ---
 
 Lab 06 – Setup source control, Git, in an extension.
