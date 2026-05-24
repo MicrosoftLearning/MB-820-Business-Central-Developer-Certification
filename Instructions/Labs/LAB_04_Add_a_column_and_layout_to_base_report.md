@@ -50,6 +50,8 @@ To create a new app: Lab 04 Reporting, follow these steps:
 
 7.  Create a new folder named: **src**.
 
+8.  Update the ID range in the app manifest **app.json**, with id range 50400 to 50449
+
 ### Create a Report Extension
 
 To create a report extension, follow these steps:

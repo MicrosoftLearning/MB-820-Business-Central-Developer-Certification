@@ -54,6 +54,8 @@ To create a new app: Lab 03 Rolecenter, follow these steps:
 
 7.  Create a new folder named: **src**.
 
+8.  Update the ID range in the app manifest **app.json**, with id range 50300 to 50349
+
 ### Create a Rolecenter page
 
 To create a Rolecenter page, follow these steps:
@@ -182,7 +184,7 @@ To create a profile page, follow these steps:
 
 3.  Add the following code in the MyProfile.Profile.alfile:  
 
-   ```
+```
        al-languageCopy  
        profile MyProfile
            {
@@ -190,7 +192,7 @@ To create a profile page, follow these steps:
                RoleCenter = MyRoleCenter;
                Caption = 'My profile';
            }
-    ```
+```
 
 ### Deploy your Lab 03 Rolecenter app.
 

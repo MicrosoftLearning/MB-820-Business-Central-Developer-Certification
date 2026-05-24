@@ -50,6 +50,8 @@ To create a new app: Lab 05 APIs, follow these steps:
 
 7.  Create a new folder named: **src**.
 
+8.  Update the ID range in the app manifest **app.json**, with id range 50500 to 50549
+
 ### Create a Page API for Items
 
 To create a page API for items, follow these steps:
@@ -62,7 +64,7 @@ To create a page API for items, follow these steps:
 
     ```
         al-languageCopy  
-        page 50100 Items
+        page 50500 Items
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';
@@ -126,7 +128,7 @@ To create a query API for item ledgers, follow these steps:
 
     ```
         al-languageCopy  
-        query 50100 ItemLedgers
+        query 50500 ItemLedgers
            {
                APIGroup = 'powerBI';
                APIPublisher = 'contoso';

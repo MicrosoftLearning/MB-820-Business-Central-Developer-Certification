@@ -54,6 +54,8 @@ To create a new app: Lab 02 InstallationUpgradeCode, follow these steps:
 
 7.  Create a new folder named: **src**.
 
+8.  Update the ID range in the app manifest **app.json**, with id range 50200 to 50249
+
 ### Create an Installation Codeunit
 
 To create an Installation Codeunit, follow these steps:
@@ -69,7 +71,7 @@ To create an Installation Codeunit, follow these steps:
         codeunit 50200 Installation
            {  
                Subtype = Install;
-               trigger OnInstallAppPerDatabase();
+               trigger OnInstallAppPerCompany();
                var
                    myAppInfo: ModuleInfo;
                begin
@@ -130,36 +132,52 @@ To create an upgrade codeunit, follow these steps:
    
     ```
         al-languageCopy  
-        codeunit 50201 Upgrade
-           {
-               Subtype = Upgrade;
-               trigger OnCheckPreconditionsPerCompany();
-               var
-                   myInfo: ModuleInfo;
-               begin
-                   if NavApp.GetCurrentModuleInfo(myInfo) then
-                       if myInfo.DataVersion = Version.Create(1, 0, 0, 1) then
-                           error('The upgrade is not compatible');
-               end;
-               trigger OnUpgradePerCompany()
-               begin
-                   UpdateSalespeople();
-               end;
-               local procedure UpdateSalespeople()
-               var
-                   SalespersonPurchaser: Record "Salesperson/Purchaser";
-                 Counter: Integer;
-                  OldSalespersonCode, NewSalespersonCode : code[20];
-               begin
-                   for Counter := 1 to 5 do begin
-                       clear(SalespersonPurchaser);
-                       OldSalespersonCode := 'SP_' + Format(Counter);
-                       NewSalespersonCode := 'SP ' + Format(Counter);
-                       if SalespersonPurchaser.Get(OldSalespersonCode) then
-                           SalespersonPurchaser.Rename(NewSalespersonCode);
-                   end;
-               end;
-           }
+        codeunit 50201 "Salespeople Upgrade"
+        {
+            Subtype = Upgrade;
+        
+            trigger OnUpgradePerCompany()
+            begin
+                UpdateSalespeople();
+            end;
+        
+            local procedure UpdateSalespeople()
+            var
+                UpgradeTag: Codeunit "Upgrade Tag";
+            begin
+                if UpgradeTag.HasUpgradeTag(UpdateSalespeopleLbl) then exit;
+        
+                UpdateSalespeople();
+        
+                UpgradeTag.SetUpgradeTag(UpdateSalespeopleLbl);
+            end;
+        
+        
+            [EventSubscriber(ObjectType::Codeunit, Codeunit::"Upgrade Tag", 'OnGetPerCompanyUpgradeTags', '', false, false)]
+            local procedure OnGetPerCompanyUpgradeTags(var PerCompanyUpgradeTags: List of [Code[250]])
+            begin
+                PerCompanyUpgradeTags.Add(UpdateSalespeopleLbl);
+            end;
+        
+        
+            var
+                UpdateSalespeopleLbl: Label 'PublisherAffix-UpdateSalespeople-ID-20260524', Locked = true;
+        
+            local procedure UpdateSalespeople()
+            var
+                SalespersonPurchaser: Record "Salesperson/Purchaser";
+                Counter: Integer;
+                OldSalespersonCode, NewSalespersonCode : code[20];
+            begin
+                for Counter := 1 to 5 do begin
+                    clear(SalespersonPurchaser);
+                    OldSalespersonCode := 'SP_' + Format(Counter);
+                    NewSalespersonCode := 'SP ' + Format(Counter);
+                    if SalespersonPurchaser.Get(OldSalespersonCode) then
+                        SalespersonPurchaser.Rename(NewSalespersonCode);
+                end;
+            end;
+        }
     ```
 
 ### Test the Upgrade code
